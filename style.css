@@ -1,18 +1,24 @@
-.da-center {
-  text-align: center;
-}
+figcaption a { text-decoration: none }
+
+.da-center { text-align: center }
+
+.da-dotless { list-style: none; }
+.da-inline li { display: inline }
+.da-border-right { border-right: 2px solid black; margin-right: -2px}
+
+/* see http://stackoverflow.com/questions/4663459/jquery-mobile-collapsible-content */
+.ui-collapsible.ui-collapsible-collapsed .ui-collapsible-heading .ui-icon-plus { background-position: -108px 0; }
+.ui-collapsible .ui-collapsible-heading .ui-icon-minus { background-position: -216px 0; }
+
+.da-large { font-size: 105% }
+.da-larger { font-size: 110% }
+.da-largest { font-size: 115% }
 
 .da-progress-list  li {
   height: 15px;
   margin: 10px 0;
   padding: 5px;
 }
-
-.da-dotless { list-style: none; margin: 0 }
-
-.da-large { font-size: 110% }
-.da-larger { font-size: 120% }
-.da-largest { font-size: 130% }
 
 .da-progress-bar {
   background-color: #1a1a1a;

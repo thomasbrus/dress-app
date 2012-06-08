@@ -7,27 +7,163 @@
     <link rel="stylesheet" href="style.css" />
 
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
     <script src="script.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
   </head>
   
   <body>
     <div data-role="page">
       <div data-role="header" data-position="fixed">
-        <a data-rel="back">&laquo;</a>
+        <a data-rel="back" data-icon="back">Terug</a>
         <a href="index.html" data-icon="grid">Camera</a>
-        <h1>DressApp</h1>
+        <h1>DressApp - winkelinfo</h1>
       </div>
       
       <div data-role="content">
-        <ul data-role="listview">
-          <li><a href="stores/ca.html" data-rel="dialog">C&amp;A</a></li>
-          <li><a href="stores/sting.html" data-rel="dialog">Sting</a></li>
-          <li><a href="stores/open32.html" data-rel="dialog">Open32</a></li>
-          <li><a href="stores/hm.html" data-rel="dialog">H&M</a></li>
-        </ul>
+        <div data-role="collapsible" data-iconpos="right">
+          <h2>C&amp;A</h3>
+          <div class="ui-grid-b">
+            <div class="ui-block-b da-larger">
+              <p>
+                Plein 52A<br />
+                Enschede<br />
+                0900-8010<br />
+                <a href="http://c-and-a.com">c-and-a.com</a>
+              </p>
+            </div>
+            <div class="ui-block-b da-largest da-progress-list">
+              <ul class="da-dotless">
+                <li>Prijs</li>
+                <li>Service</li>
+                <li>Assortiment</li>
+                <li>Totaal</li>
+              </ul>
+            </div>
+            <div class="ui-block-c">
+              <div class="da-progress-bar da-blue">
+                <span style="width: 80%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 60%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 40%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 60%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div data-role="collapsible" data-iconpos="right">
+          <h2>The Sting</h3>
+          <div class="ui-grid-b">
+            <div class="ui-block-b da-larger">
+              <p>
+                Plein 86<br />
+                Enschede<br />
+                053-4837235<br />
+                <a href="http://thesting.nl">thesting.nl</a>
+              </p>
+            </div>
+            <div class="ui-block-b da-largest da-progress-list">
+              <ul class="da-dotless">
+                <li>Prijs</li>
+                <li>Service</li>
+                <li>Assortiment</li>
+                <li>Totaal</li>
+              </ul>
+            </div>
+            <div class="ui-block-c">
+              <div class="da-progress-bar da-blue">
+                <span style="width: 70%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 40%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 60%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 60%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div data-role="collapsible" data-iconpos="right">
+          <h2>Open32</h3>
+          <div class="ui-grid-b">
+            <div class="ui-block-b da-larger">
+              <p>
+                Klanderij 81<br />
+                Enschede<br />
+                053-4365548<br />
+                <a href="http://www.open32.nl/">www.open32.nl/</a>
+              </p>
+            </div>
+            <div class="ui-block-b da-largest da-progress-list">
+              <ul class="da-dotless">
+                <li>Prijs</li>
+                <li>Service</li>
+                <li>Assortiment</li>
+                <li>Totaal</li>
+              </ul>
+            </div>
+            <div class="ui-block-c">
+              <div class="da-progress-bar da-blue">
+                <span style="width: 50%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 80%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 30%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 50%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div data-role="collapsible" data-iconpos="right">
+          <h2>H&amp;M</h3>
+          <div class="ui-grid-b">
+            <div class="ui-block-b da-larger">
+              <p>
+                Kladerij 98<br />
+                Enschede<br />
+                0900-1988<br />
+                <a href="http://hm.com">hm.com</a>
+              </p>
+            </div>
+            <div class="ui-block-b da-largest da-progress-list">
+              <ul class="da-dotless">
+                <li>Prijs</li>
+                <li>Service</li>
+                <li>Assortiment</li>
+                <li>Totaal</li>
+              </ul>
+            </div>
+            <div class="ui-block-c">
+              <div class="da-progress-bar da-blue">
+                <span style="width: 80%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 60%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 40%"></span>
+              </div>
+              <div class="da-progress-bar da-blue">
+                <span style="width: 60%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   </body>
 </html>
