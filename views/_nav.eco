@@ -1,0 +1,12 @@
+<div data-role="header" data-position="fixed">
+  <% unless @homepage: %>
+  <a href="/" data-role="button" data-icon="home" data-iconpos="notext">
+    Home
+  </a>
+  <% end %>
+  <% console.log @ %>
+	<h1><%= @title %></h1>  
+	<a href="/barcode-scanner" data-role="button" data-icon="grid" data-iconpos="left" data-theme="e" class="ui-btn-right" title="Barcode">
+	  Barcode
+	</a>
+</div>

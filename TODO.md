@@ -1,0 +1,1 @@
+* Camera & barcode icon toevoegen: https://github.com/commadelimited/jQuery-Mobile-Icon-Pack
