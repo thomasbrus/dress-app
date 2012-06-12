@@ -1,0 +1,42 @@
+<div class="ui-grid-b store">
+	
+	<div class="ui-block-a">
+	  <p>
+  	  <%= @store.address %> <br />
+  	  <%= @store.zip_code %> <br />
+  	  <%= @store.phone %> <br />
+  	  <%- "<a href=#{@store.web.link}>#{@store.web.description}</a>" %>
+	  </p>
+  </div>
+  
+	<div class="ui-block-b">
+	  <table>
+		  <tbody>
+  		  <tr class="price">
+  		    <th>Prijs</th>
+  		    <td><%- @partial 'stars', count: @store.ratings.price %></td>
+  		  </tr>
+  		  <tr class="service">
+  		    <th scope="row">Service</th>
+  		    <td><%- @partial 'stars', count: @store.ratings.service %></td>
+  		  </tr>
+		  </tbody>
+		</table>
+	</div>
+	
+	<div class="ui-block-c">
+	  <table>
+		  <tbody>
+  		  <tr class="assortment">
+  		    <th scope="row">Assortiment</th>
+  		    <td><%- @partial 'stars', count: @store.ratings.assortment %></td>
+  		  </tr>
+		    <tr class="average">
+		      <th scope="row">Gemiddeld</th>
+  		    <td><%- @partial 'stars', count: @store.ratings.average %></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+</div>

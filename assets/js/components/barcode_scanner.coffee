@@ -1,10 +1,9 @@
 class @BarcodeScanner
   
   constructor: () ->
+    @video = $('#barcode-scanner-video')
     @.bindHandlers()
     
-  bindHandlers: ->    
-    $('#barcode-scanner-video').bind 'timeupdate', (e) =>
-      if e.target.currentTime >= 8
-        $.mobile.changePage '/seasons'
-        e.target.currentTime = 0
+  bindHandlers: ->
+    @video.on 'ended', ->
+      console.log 'Video ended'

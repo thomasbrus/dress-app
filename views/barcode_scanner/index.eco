@@ -1,14 +1,13 @@
 <div data-role="page" id="barcode-scanner" data-theme="a">
 		
 	<div data-role="content">
-    <video id="barcode-scanner-video" autoplay>
+    <video id="barcode-scanner-video" width="320" height="160" autoplay webkit-playsinline>
       <source src="/videos/barcode.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'/>
       <p>This is fallback content, place youtube / vimeo video here</p>
       <%# http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php %>
     </video>
     <p class="explanation">
-      Plaats een barcode binnen de rechthoek om hem te scannen.
-      
+      Plaats een barcode binnen de rechthoek om hem te scannen.      
     </p>
 	</div>
 

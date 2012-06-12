@@ -1,11 +1,11 @@
 class @UI
   
   constructor: () ->
-    @.redraw()
     @.bindHandlers()
     
   bindHandlers: ->
-    $(window).resize @.redraw
+    $(document).bind 'pageready ready', @.redraw
+    $(window).bind 'resize', @.redraw
 
   redraw: ->
     $btn = $('.ui-btn-center')

@@ -26,8 +26,11 @@ app.configure 'production', ->
 # Helpers
 
 app.dynamicHelpers
-  url: (req, res) ->
-    req.url
+  parent: (req, res) ->
+    if req.url is '/menu'
+      null
+    else
+      'Home'
 
 # Routes
 
@@ -37,5 +40,5 @@ app.get '/top-9', routes.top_9.index
 app.get '/stores', routes.stores.index
 app.get '/seasons', routes.seasons.index
 
-app.listen (process.env.PORT or 4000)
+app.listen (process.env.PORT or 3000)
 console.log "Web server listening on port %d in %s mode", app.address().port, app.settings.env

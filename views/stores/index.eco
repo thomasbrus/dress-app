@@ -3,26 +3,13 @@
   <%- @partial 'nav' %>
 	
 	<div data-role="content">
-
-    <div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed="false">
-      <h3>C&amp;A</h3>
-      <p><%- @partial 'c_and_a' %></p>
-    </div>
-  
-    <div data-role="collapsible" data-theme="c" data-content-theme="d">
-      <h3>The Sting</h3>
-      <p><%- @partial 'the_sting' %></p>
-    </div>
-  
-    <div data-role="collapsible" data-theme="c" data-content-theme="d">
-      <h3>Open32</h3>
-      <p><%- @partial 'open32' %></p>
-    </div>
-  
-    <div data-role="collapsible" data-theme="c" data-content-theme="d">
-      <h3>H&amp;M</h3>
-      <p><%- @partial 'h_and_m' %></p>
-    </div>
+        
+    <% for store in @stores: %>    
+      <div data-role="collapsible" data-theme="c" data-content-theme="d">
+        <h3><%= store.title %></h3>
+        <div><%- @partial 'store', store: store %></div>
+      </div>
+    <% end %>
 
 	</div>
 

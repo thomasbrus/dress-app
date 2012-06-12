@@ -12,11 +12,5 @@ run_server = ->
   server?.kill()
   server = stream 'coffee', ['app.coffee']
   
-deploy = ->
-  console.log 'Not yet implemented.'
-  
 task 'server', 'Run web server', ->
   run_server()
-
-task 'deploy', 'Deploy to Heroku', ->
-  deploy()

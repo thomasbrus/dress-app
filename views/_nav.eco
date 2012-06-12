@@ -1,7 +1,8 @@
-<div data-role="header" data-position="fixed" data-theme="a">
-  <% unless @url == '/menu': %>
-    <a href="/menu" data-role="button" data-icon="home" data-iconpos="left" data-theme="c">
-      Menu
+<div data-role="header" data-theme="a">
+  <% console.log @ %>
+  <% if @parent: %>
+    <a href="/menu" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
+      <%= @parent %>
     </a>
   <% end %>
 	<h1><%= @title %></h1>

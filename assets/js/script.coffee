@@ -1,6 +1,6 @@
 #= require_tree ./components
 
-$(document).bind 'pageinit pagechange ready', ->
+$(document).bind 'pageinit', ->
 
   switch window.location.pathname
     when '/'

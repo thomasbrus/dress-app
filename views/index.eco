@@ -6,7 +6,7 @@
 
     <ul data-role="listview">
       <li><a href="/stores">Winkelinfo</a></li>
-      <li><a href="/top-9">Top 9: Populairste kleding</a></li>
+      <li><a href="/top-9">Kleding Top 9</a></li>
       <li><a href="/seasons">Kerstkleding</a></li>
     </ul>
 
