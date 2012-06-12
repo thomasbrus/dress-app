@@ -3,15 +3,8 @@ class @BarcodeScanner
   constructor: () ->
     @.bindHandlers()
     
-  bindHandlers: ->
-    $('.camera-btn').toggle =>
-      console.log 'Play video'
-      @.playVideo()
-    , =>
-      @.pauseVideo()
-
-  playVideo: ->
-    $('#barcode-scanner-video')[0].play()
-        
-  pauseVideo: ->
-    $('#barcode-scanner-video')[0].pause()
+  bindHandlers: ->    
+    $('#barcode-scanner-video').bind 'timeupdate', (e) =>
+      if e.target.currentTime >= 8
+        $.mobile.changePage '/seasons'
+        e.target.currentTime = 0

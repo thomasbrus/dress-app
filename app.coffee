@@ -26,19 +26,16 @@ app.configure 'production', ->
 # Helpers
 
 app.dynamicHelpers
-  level: (req, res) ->
-    if req.url is '/'
-      0
-    else
-      req.url.match(/\//g).length
+  url: (req, res) ->
+    req.url
 
 # Routes
 
-app.get '/', routes.index
-app.get '/barcode-scanner', routes.barcode_scanner.index
+app.get '/', routes.barcode_scanner.index
+app.get '/menu', routes.index
 app.get '/top-9', routes.top_9.index
 app.get '/stores', routes.stores.index
 app.get '/seasons', routes.seasons.index
 
-app.listen (process.env.PORT or 3000)
+app.listen (process.env.PORT or 4000)
 console.log "Web server listening on port %d in %s mode", app.address().port, app.settings.env

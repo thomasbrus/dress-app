@@ -3,7 +3,7 @@
 $(document).bind 'pageinit pagechange ready', ->
 
   switch window.location.pathname
-    when '/barcode-scanner'
+    when '/'
       new BarcodeScanner()
   
   new UI()

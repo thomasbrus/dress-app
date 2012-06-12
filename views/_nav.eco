@@ -1,16 +1,11 @@
 <div data-role="header" data-position="fixed" data-theme="a">
-  <% if @level == 1: %>
-    <a href="/" data-role="button" data-icon="home" data-iconpos="left" data-theme="c">
+  <% unless @url == '/menu': %>
+    <a href="/menu" data-role="button" data-icon="home" data-iconpos="left" data-theme="c">
       Menu
     </a>
   <% end %>
-  <% if @level > 1: %>
-    <a data-rel="back" data-role="button" data-icon="back" data-iconpos="left" data-theme="c">
-      Terug
-    </a>
-  <% end %>
-	<h1><%= @title %></h1>  
-	<a href="/barcode-scanner" data-role="button" data-icon="grid" data-iconpos="left" data-theme="e" data-transition="slidedown" class="ui-btn-right" title="Barcode">
+	<h1><%= @title %></h1>
+	<a href="/" data-role="button" data-icon="grid" data-iconpos="left" data-theme="e" data-transition="slidedown" class="ui-btn-right" title="Barcode">
 	  Barcode
 	</a>
 </div>
