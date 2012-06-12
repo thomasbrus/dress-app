@@ -1,5 +1,4 @@
-fs              = require 'fs'
-{spawn}   = require 'child_process'
+{spawn} = require 'child_process'
 
 server = null
 
@@ -19,5 +18,5 @@ deploy = ->
 task 'server', 'Run web server', ->
   run_server()
 
-task 'deploy', 'Deploy a static version to Github Pages', ->
+task 'deploy', 'Deploy to Heroku', ->
   deploy()

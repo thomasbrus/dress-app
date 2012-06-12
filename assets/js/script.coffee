@@ -1,9 +1,9 @@
 #= require_tree ./components
 
-$(document).bind 'pageinit', () ->
+$(document).bind 'pageinit pagechange ready', ->
 
   switch window.location.pathname
     when '/barcode-scanner'
       new BarcodeScanner()
-    else
-      new UI()
+  
+  new UI()

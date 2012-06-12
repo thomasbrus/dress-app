@@ -9,7 +9,7 @@ class @BarcodeScanner
       @.playVideo()
     , =>
       @.pauseVideo()
-      
+
   playVideo: ->
     $('#barcode-scanner-video')[0].play()
         

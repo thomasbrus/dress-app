@@ -1,0 +1,11 @@
+<div data-role="page">
+
+  <%- @partial 'nav' %>
+	
+	<div data-role="content">
+
+    <h2>Top 9</h2>
+
+	</div>
+
+</div>

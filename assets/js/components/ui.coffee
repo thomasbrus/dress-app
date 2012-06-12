@@ -5,8 +5,7 @@ class @UI
     @.bindHandlers()
     
   bindHandlers: ->
-    $(window).resize =>
-      @.redraw()
+    $(window).resize @.redraw
 
   redraw: ->
     $btn = $('.ui-btn-center')

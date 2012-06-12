@@ -23,13 +23,22 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use express.errorHandler()
 
+# Helpers
+
+app.dynamicHelpers
+  level: (req, res) ->
+    if req.url is '/'
+      0
+    else
+      req.url.match(/\//g).length
+
 # Routes
 
 app.get '/', routes.index
-app.get '/barcode-scanner', routes.barcode_scanner
-app.get '/top-9', routes.top_9
-app.get '/stores', routes.stores
-app.get '/seasons', routes.seasons
+app.get '/barcode-scanner', routes.barcode_scanner.index
+app.get '/top-9', routes.top_9.index
+app.get '/stores', routes.stores.index
+app.get '/seasons', routes.seasons.index
 
 app.listen (process.env.PORT or 3000)
 console.log "Web server listening on port %d in %s mode", app.address().port, app.settings.env
