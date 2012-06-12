@@ -5,7 +5,7 @@
 	<div data-role="content">
         
     <% for store in @stores: %>    
-      <div data-role="collapsible" data-theme="c" data-content-theme="d">
+      <div data-role="collapsible" data-theme="c" data-content-theme="d" data-iconpos="right">
         <h3><%= store.title %></h3>
         <div><%- @partial 'store', store: store %></div>
       </div>

@@ -18,12 +18,15 @@ app.configure ->
   app.register '.eco', eco
 
 app.configure 'development', ->
-  app.use express.errorHandler({ dumpExceptions: true, showStack: true })
+  app.use express.errorHandler dumpExceptions: true, showStack: true
 
 app.configure 'production', ->
   app.use express.errorHandler()
 
 # Helpers
+app.helpers
+  cycle: (classes, i) ->
+    classes[i % classes.length]
 
 app.dynamicHelpers
   parent: (req, res) ->

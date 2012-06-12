@@ -1,5 +1,4 @@
 <div data-role="header" data-theme="a">
-  <% console.log @ %>
   <% if @parent: %>
     <a href="/menu" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
       <%= @parent %>

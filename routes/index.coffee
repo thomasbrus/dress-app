@@ -1,11 +1,17 @@
-stores = require '../fixtures/stores'
+stores  = require '../fixtures/stores'
+top_9   = require '../fixtures/top_9'
 
 exports.index = (req, res) ->
   res.render 'index', title: 'Startpagina'
     
 exports.top_9 =
   index: (req, res) ->
-    res.render 'top_9', title: 'Top 9'
+    @top_9 = [
+      top_9.johnboy_iii, top_9.campagnolo, top_9.june_camp,
+      top_9.esprit, top_9.bugatti, top_9.humor,
+      top_9.temaru, top_9.spray, top_9.tiki
+    ]
+    res.render 'top_9', title: 'Top 9', top_9: @top_9
 
 exports.stores = 
   index: (req, res) ->

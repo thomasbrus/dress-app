@@ -1,0 +1,6 @@
+<div data-role="content" data-theme="d" class="article">
+  <img src="<%= @article.image %>" alt="<%= @article.title %>" />
+  <h3>
+    <a href="/"><%= @article.title %></a>
+  </h3>
+</div>

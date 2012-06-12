@@ -2,10 +2,14 @@
 
   <%- @partial 'nav' %>
 	
-	<div data-role="content">
+  <div class="ui-grid-b" id="articles">
 
-    <h2>Top 9</h2>
+    <% for article, i in @top_9: %>
+      <div class="<%= @cycle ['ui-block-a', 'ui-block-b', 'ui-block-c'], i %>">
+        <%- @partial 'article', article: article %>
+    	</div>
+    <% end %>
 
-	</div>
+  </div>
 
 </div>
