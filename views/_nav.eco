@@ -1,11 +1,19 @@
 <div data-role="header" data-theme="a">
-  <% if @parent: %>
-    <a href="/menu" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
-      <%= @parent %>
+
+  <% unless @parent?: %>
+    <a href="/menu" data-role="button" data-icon="back" data-iconpos="left" data-theme="c">
+      Home
+    </a>
+  <% else unless @parent == false: %>  
+    <a href="<%= @parent.href %>" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
+      <%= @parent.title %>
     </a>
   <% end %>
+  
 	<h1><%= @title %></h1>
-	<a href="/" data-role="button" data-icon="grid" data-iconpos="left" data-theme="e" data-transition="slidedown" class="ui-btn-right" title="Barcode">
+
+	<a href="/" data-role="button" data-icon="grid" data-iconpos="left" data-theme="e" class="ui-btn-right" title="Barcode">
 	  Barcode
 	</a>
+
 </div>

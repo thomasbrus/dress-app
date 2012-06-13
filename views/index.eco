@@ -1,6 +1,6 @@
 <div data-role="page">
 
-  <%- @partial 'nav' %>
+  <%- @partial 'nav', parent: false %>
 	
 	<div data-role="content">
 

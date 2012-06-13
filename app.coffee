@@ -28,18 +28,12 @@ app.helpers
   cycle: (classes, i) ->
     classes[i % classes.length]
 
-app.dynamicHelpers
-  parent: (req, res) ->
-    if req.url is '/menu'
-      null
-    else
-      'Home'
-
 # Routes
 
 app.get '/', routes.barcode_scanner.index
 app.get '/menu', routes.index
 app.get '/top-9', routes.top_9.index
+app.get '/top-9/:id', routes.top_9.show
 app.get '/stores', routes.stores.index
 app.get '/seasons', routes.seasons.index
 

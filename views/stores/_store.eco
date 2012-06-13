@@ -1,10 +1,12 @@
-<div class="ui-grid-b store">
+<div class="ui-grid-a store">
 	
 	<div class="ui-block-a">
 	  <p>
-  	  <%= @store.address %> <br />
+	    <%= @store.address %> <br />
   	  <%= @store.zip_code %> <br />
   	  <%= @store.phone %> <br />
+  	</p>
+  	<p>
   	  <%- "<a href=#{@store.web.link}>#{@store.web.description}</a>" %>
 	  </p>
   </div>
@@ -20,13 +22,6 @@
   		    <th scope="row">Service</th>
   		    <td><%- @partial 'stars', count: @store.ratings.service %></td>
   		  </tr>
-		  </tbody>
-		</table>
-	</div>
-	
-	<div class="ui-block-c">
-	  <table>
-		  <tbody>
   		  <tr class="assortment">
   		    <th scope="row">Assortiment</th>
   		    <td><%- @partial 'stars', count: @store.ratings.assortment %></td>

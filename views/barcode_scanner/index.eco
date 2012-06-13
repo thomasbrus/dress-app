@@ -1,8 +1,9 @@
 <div data-role="page" id="barcode-scanner" data-theme="a">
 		
 	<div data-role="content">
-    <video id="barcode-scanner-video" width="320" height="160" autoplay webkit-playsinline>
-      <source src="/videos/barcode.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'/>
+    <video id="barcode-scanner-video" autoplay webkit-playsinline>
+      <source src="/videos/barcode.mp4" type="video/mp4"/>
+      <source src="/videos/barcode.mov" type="video/mov"/>
       <p>This is fallback content, place youtube / vimeo video here</p>
       <%# http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php %>
     </video>
@@ -12,8 +13,8 @@
 	</div>
 
   <div data-role="footer" data-theme="c">
-    <a href="/menu" data-role="button" data-transition="slideup" data-theme="a" class="ui-btn-left" data-icon="grid" data-iconpos="left">Menu</a>    
-    <a href="/seasons" data-role="button" data-icon="search" data-iconpos="left" data-theme="b" class="ui-btn-center camera-btn">Scan barcode</a>
+    <a href="/menu" data-role="button" data-theme="a" class="ui-btn-left" data-icon="grid" data-iconpos="left">Menu</a>    
+    <a href="/top-9" data-role="button" data-icon="search" data-iconpos="left" data-theme="b" class="ui-btn-center camera-btn">Scan barcode</a>
   </div>
 
 </div>

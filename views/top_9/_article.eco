@@ -1,6 +1,6 @@
-<div data-role="content" data-theme="d" class="article">
+<div class="ui-body ui-body-d article">
   <img src="<%= @article.image %>" alt="<%= @article.title %>" />
   <h3>
-    <a href="/"><%= @article.title %></a>
+    <a href="/top-9/<%= @article.id %>"><%= @article.title %></a>
   </h3>
 </div>

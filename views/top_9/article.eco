@@ -1,0 +1,9 @@
+<div data-role="page">
+
+  <%- @partial 'nav', parent: { title: 'Top 9', href: '/top-9' } %>
+
+	<div data-role="content">
+	  <h1><%= @article.title %></h1>
+  </div>
+
+</div>
