@@ -1,6 +1,6 @@
-<div class="ui-grid-a store">
+<div class="store">
 	
-	<div class="ui-block-a">
+	<div class="info">
 	  <p>
 	    <%= @store.address %> <br />
   	  <%= @store.zip_code %> <br />
@@ -11,7 +11,7 @@
 	  </p>
   </div>
   
-	<div class="ui-block-b">
+	<div class="ratings">
 	  <table>
 		  <tbody>
   		  <tr class="price">

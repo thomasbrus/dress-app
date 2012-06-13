@@ -17,7 +17,7 @@ exports.top_9 =
       top_9.temaru, top_9.spray, top_9.tiki
     ]
     res.render 'top_9', title: 'Top 9', top_9: @top_9
-  
+
   show: (req, res) ->
     @article = find_article_by_id parseInt(req.params.id)
     if @article
