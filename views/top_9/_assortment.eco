@@ -1,0 +1,35 @@
+<table summary="Voorraad per winkel per kledingmaat" class="ui-body-a" id="assortment">
+  <caption class="ui-body-d">
+    <h2>Voorraad</h2>
+  </caption>
+  <% if @num_assortments > 0: %>
+	  <tbody>
+  	  <% for store, count of @article.assortments[@size]: %>      
+    	  <tr>
+  		    <th scope="row"><%= store %></th>
+  		    <% if count is 0: %>
+  		      <td class="empty"><%= count %></td>  		    
+  		    <% else: %>
+  		      <td><%= count %></td>  		    
+  		    <% end %>
+  		  </tr>
+      <% end %>
+    </tbody>
+  <% end %>
+  <tfoot>
+    <tr>
+      <% if @num_assortments > 0: %>
+        <td colspan="2">        
+          <p><small>Liever op internet bestellen?</small></p>
+          <a href="#" data-role="button" data-inline="true" data-theme="e">Bestel online</a>
+        </td>
+      <% else: %>
+        <td>        
+          <p><small>Geen voorraadinformatie beschikbaar.</small></p>
+        </td>
+      <% end %>
+    </tr>
+  </tfoot>
+</table>
+
+
