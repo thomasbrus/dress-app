@@ -2,8 +2,68 @@
 
   <%- @partial 'nav', parent: { title: 'Top 9', href: '/top-9' } %>
 
-	<div data-role="content">
-	  <h1><%= @article.title %></h1>
+	<div data-role="content" id="article">  
+    <div class="ui-grid-a ui-body-c">
+      
+      <div class="ui-block-a">
+        <img src="<%= @article.image %>" alt="<%= @article.title %>" />
+      </div>
+      
+      <div class="ui-block-b">
+        <section class="info">
+          <dl title="Kledingstuk info">
+      			<dt>Merk</dt>
+      			<dd><%= @article.brand %></dd>
+      			<dt>Kleur</dt>
+      			<dd><%= @article.color %></dd>
+      		</dl>
+    		</section>
+    		<section class="social">
+    		  <a href="<%= "/share-on-twitter/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true">
+    		    Deel op Twitter
+    		  </a>
+          <a href="<%= "/share-on-facebook/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true" data-theme="b">
+            Deel op Facebook
+          </a>
+        </section>
+      </div>
+      
+    </div>
+    
+    <%- @partial @subpage %>
+  </div>
+
+  <div data-role="footer" data-position="fixed">		
+
+    <% if @subpage is 'assortment': %>
+      <div data-role="navbar">
+    		<ul>
+          <% for size, text of { xs: 'Extra small', s: 'Small', m: 'Medium', l: 'Large', xl: 'Extra large' }: %>
+            <li>
+              <% if size is @size: %>
+      			    <a href="#" data-theme="c" class="ui-btn-active ui-state-persist"><%= text %></a>
+              <% else: %>
+      			    <a href="<%= "/top-9/#{@article.id}/#{@subpage}/#{size}" %>" data-theme="c"><%= text %></a>
+              <% end %>
+            </li>
+          <% end %>
+    		</ul>
+    	</div>
+    <% end %>
+
+  	<div data-role="navbar">
+  		<ul>
+  		  <% for subpage, text of { assortment: 'Voorraad', suggestions: 'Suggesties' }: %>
+  		    <li>
+    		    <% if subpage is @subpage: %>
+      			  <a href="#" class="ui-btn-active ui-state-persist"><%= text %></a>
+    		    <% else: %>
+    			    <a href="<%= "/top-9/#{@article.id}/#{subpage}" %>"><%= text %></a>
+    		    <% end %>
+  		    </li>
+  		  <% end %>
+  		</ul>
+  	</div>
   </div>
 
 </div>

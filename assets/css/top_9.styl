@@ -1,15 +1,102 @@
 #articles
   padding 2%
 
-.article
+#articles article
   text-align center
   padding 2%
   width auto
   margin 4%
   
-  img
-    margin-top 8%
-    height 100px
+  a
+    display block
     
-  h3
-    margin-bottom 8%
+    img
+      padding-top 8%
+      padding-bottom 2%
+      height 100px
+    
+    h3
+      padding-top 2%
+      padding-bottom 8%
+      margin 0
+      
+  a:active
+    background #f0f0f0
+
+#article
+  & > div
+    padding 10px 10px 0 10px
+    margin 0 0 15px 0
+  
+  & > div img
+    padding 5px
+  
+  .ui-block-a, .ui-block-b
+    padding-bottom 10px
+  
+  .ui-block-a
+    width 30%
+    min-width 120px
+  
+  .ui-block-b
+    width 70%
+  
+  dl
+    margin 0
+    overflow hidden
+  
+    dt, dd
+      float left
+      display block
+      padding 5px
+    
+    dt
+      font-weight bold
+      clear left
+      width 10%
+      min-width 40px
+    
+    dd
+      clear right
+
+#assortment, #suggestions
+  margin-bottom 0 !important
+  
+#assortment
+  border-spacing 0
+  width 100%
+  margin-bottom 10px
+  
+  caption
+    width: 100%
+
+    h2
+      margin 10px 20px
+
+  tbody, tfoot
+    th, td
+      padding 15px 20px
+      
+  tbody
+    th, td
+      border-bottom 1px white solid
+  
+    td
+      text-align right
+      
+      &.empty
+        color #fb5454
+        text-decoration line-through
+        font-weight bold
+  
+  tfoot
+    td
+      padding 10px
+      overflow hidden
+      
+      a
+        float right
+        
+      p
+        float left
+        padding 0 10px

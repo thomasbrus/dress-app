@@ -2,7 +2,7 @@
 
   <%- @partial 'nav' %>
 	
-  <div class="ui-grid-b" id="articles">
+  <div data-role="content" class="ui-grid-b" id="articles">
 
     <% for article, i in @top_9: %>
       <div class="<%= @cycle ['ui-block-a', 'ui-block-b', 'ui-block-c'], i %>">

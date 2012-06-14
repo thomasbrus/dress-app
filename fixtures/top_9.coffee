@@ -2,11 +2,27 @@ exports.johnboy_iii =
   id: 1
   title: 'JohnBoy III'
   image: '/images/johnboy-iii.png'
+  brand: 'Khujo'
+  color: 'Blauw / grijs'
+  assortments:
+    m: 
+      'C&A': 14
+      'The Sting': 3
+      'Open32': 9
+      'H&M': 0
 
 exports.campagnolo =
   id: 2
   title: 'Campagnolo'
   image: '/images/campagnolo.png'
+  brand: 'Nike'
+  color: 'Geel'
+  assortments:
+    m:
+      'C&A': 8
+      'The Sting': 21
+      'Open32': 4
+      'H&M': 9
 
 exports.june_camp =
   id: 3

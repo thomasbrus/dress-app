@@ -18,12 +18,39 @@ exports.top_9 =
     ]
     res.render 'top_9', title: 'Top 9', top_9: @top_9
 
-  show: (req, res) ->
+  show: (req, res) ->    
+    @size = req.params.size or 'm'
+    @subpage = req.params.subpage or 'assortment'
     @article = find_article_by_id parseInt(req.params.id)
     if @article
-      res.render 'top_9/article', article: @article
+      try
+        @num_assortments = Object.keys(@article.assortments[@size]).length
+      catch e
+        @num_assortments = 0        
+      res.render 'top_9/article', {
+        title: @article.title,
+        article: @article,
+        num_assortments: @num_assortments,
+        subpage: @subpage,
+        size: @size
+      }
     else
-      throw new Error "Kan kledingstuk #{req.params.id} niet vinden."
+      throw Error "Kan kledingstuk #{req.params.id} niet vinden."
+
+exports.social =
+  share_on_twitter: (req, res) ->
+    @article = find_article_by_id parseInt(req.params.id)
+    if @article
+      res.render 'social/share_on_twitter'
+    else
+      throw Error "Kan kledingstuk #{req.params.id} niet vinden."
+
+  share_on_facebook: (req, res) ->
+    @article = find_article_by_id parseInt(req.params.id)
+    if @article
+      res.render 'social/share_on_facebook'
+    else
+      throw Error "Kan kledingstuk #{req.params.id} niet vinden."
 
 exports.stores = 
   index: (req, res) ->

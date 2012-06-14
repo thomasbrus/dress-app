@@ -16,4 +16,6 @@
 	  Barcode
 	</a>
 
+  <%- @navbar %>
+
 </div>

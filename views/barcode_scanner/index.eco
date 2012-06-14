@@ -2,14 +2,14 @@
 		
 	<div data-role="content">
 	  <img src="/images/barcode-scanner.jpg" alt="Barcode scanner" id="barcode-scanner" />
-    <p class="explanation">
-      Plaats een barcode binnen de rechthoek om hem te scannen.      
-    </p>
+    <section class="explanation">
+      <p>Houdt de barcode van het kledingstuk voor de lens om hem te scannen.</p>
+    </section>
 	</div>
 
   <div data-role="footer" data-theme="c">
     <a href="/menu" data-role="button" data-theme="a" class="ui-btn-left" data-icon="grid" data-iconpos="left">Menu</a>    
-    <a href="/top-9" data-role="button" data-icon="search" data-iconpos="left" data-theme="b" class="ui-btn-center camera-btn">Scan barcode</a>
+    <a href="/top-9/1" data-role="button" data-icon="search" data-iconpos="left" data-theme="b" class="ui-btn-center camera-btn">Scan barcode</a>
   </div>
 
 </div>

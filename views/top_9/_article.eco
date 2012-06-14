@@ -1,6 +1,6 @@
-<div class="ui-body ui-body-d article">
-  <img src="<%= @article.image %>" alt="<%= @article.title %>" />
-  <h3>
-    <a href="/top-9/<%= @article.id %>"><%= @article.title %></a>
-  </h3>
-</div>
+<article class="ui-body ui-body-d">
+  <a href="/top-9/<%= @article.id %>" onclick="">
+    <img src="<%= @article.image %>" alt="<%= @article.title %>" />
+    <h3><%= @article.title %></h3>
+  </a>
+</article>
