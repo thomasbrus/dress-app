@@ -34,7 +34,7 @@ app.get '/', routes.barcode_scanner.index
 app.get '/menu', routes.index
 app.get '/top-9', routes.top_9.index
 app.get '/top-9/:id/:subpage?', routes.top_9.show
-app.get '/top-9/:id/:subpage/:size?', routes.top_9.show
+app.get '/top-9/:id/assortment/:size?', routes.top_9.show
 app.get '/stores', routes.stores.index
 app.get '/seasons', routes.seasons.index
 app.get '/share-on-twitter/:id', routes.social.share_on_twitter
