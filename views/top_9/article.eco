@@ -5,12 +5,12 @@
 	<div data-role="content" id="article">  
     <div class="ui-grid-a ui-body-c">
       
-      <div class="ui-block-a">
+      <div class="ui-block-a image">
         <img src="<%= @article.image %>" alt="<%= @article.title %>" />
       </div>
       
-      <div class="ui-block-b">
-        <section class="info">
+      <div class="ui-block-b info">
+        <section>
           <dl title="Kledingstuk info">
       			<dt>Merk</dt>
       			<dd><%= @article.brand %></dd>
@@ -18,7 +18,7 @@
       			<dd><%= @article.color %></dd>
       		</dl>
     		</section>
-    		<section class="social">
+    		<section>
     		  <a href="<%= "/share-on-twitter/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true">
     		    Deel op Twitter
     		  </a>
@@ -31,39 +31,6 @@
     </div>
     
     <%- @partial @subpage %>
-  </div>
-
-  <div data-role="footer" data-position="fixed">		
-
-    <% if @subpage is 'assortment': %>
-      <div data-role="navbar">
-    		<ul>
-          <% for size, text of { xs: 'Extra small', s: 'Small', m: 'Medium', l: 'Large', xl: 'Extra large' }: %>
-            <li>
-              <% if size is @size: %>
-      			    <a href="#" data-theme="c" class="ui-btn-active ui-state-persist"><%= text %></a>
-              <% else: %>
-      			    <a href="<%= "/top-9/#{@article.id}/#{@subpage}/#{size}" %>" data-theme="c"><%= text %></a>
-              <% end %>
-            </li>
-          <% end %>
-    		</ul>
-    	</div>
-    <% end %>
-
-  	<div data-role="navbar">
-  		<ul>
-  		  <% for subpage, text of { assortment: 'Voorraad', suggestions: 'Suggesties' }: %>
-  		    <li>
-    		    <% if subpage is @subpage: %>
-      			  <a href="#" class="ui-btn-active ui-state-persist"><%= text %></a>
-    		    <% else: %>
-    			    <a href="<%= "/top-9/#{@article.id}/#{subpage}" %>"><%= text %></a>
-    		    <% end %>
-  		    </li>
-  		  <% end %>
-  		</ul>
-  	</div>
   </div>
 
 </div>

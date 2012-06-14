@@ -1,0 +1,29 @@
+<div data-role="navbar">
+	<ul>
+	  <% for subpage, text of { assortment: 'Voorraad', suggestions: 'Suggesties' }: %>
+	    <li>
+		    <% if subpage is @subpage: %>
+  			  <a href="#" class="ui-btn-active ui-state-persist"><%= text %></a>
+		    <% else: %>
+			    <a href="<%= "/top-9/#{@article.id}/#{subpage}" %>"><%= text %></a>
+		    <% end %>
+	    </li>
+	  <% end %>
+	</ul>
+</div>
+
+<% if @subpage is 'assortment': %>
+  <div data-role="navbar">
+		<ul>
+      <% for size, text of { xs: 'XS', s: 'S', m: 'M', l: 'L', xl: 'XL' }: %>
+        <li>
+          <% if size is @size: %>
+  			    <a href="#" data-theme="c" class="ui-btn-active ui-state-persist"><%= text %></a>
+          <% else: %>
+  			    <a href="<%= "/top-9/#{@article.id}/#{@subpage}/#{size}" %>" data-theme="c"><%= text %></a>
+          <% end %>
+        </li>
+      <% end %>
+		</ul>
+	</div>
+<% end %>

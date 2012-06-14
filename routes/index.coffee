@@ -21,7 +21,7 @@ exports.top_9 =
   show: (req, res) ->    
     @size = req.params.size or 'm'
     @subpage = req.params.subpage or 'assortment'
-    @article = find_article_by_id parseInt(req.params.id)
+    @article = find_article_by_id parseInt(req.params.id)    
     if @article
       try
         @num_assortments = Object.keys(@article.assortments[@size]).length

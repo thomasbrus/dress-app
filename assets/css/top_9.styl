@@ -31,14 +31,14 @@
   & > div img
     padding 5px
   
-  .ui-block-a, .ui-block-b
+  .image, .info
     padding-bottom 10px
   
-  .ui-block-a
+  .image
     width 30%
     min-width 120px
   
-  .ui-block-b
+  .info
     width 70%
   
   dl
@@ -78,16 +78,19 @@
       padding 15px 20px
       
   tbody
+    tr.empty
+      th
+        text-decoration line-through
+
+      td
+        color #fb5454
+        font-weight bold
+  
     th, td
       border-bottom 1px white solid
   
     td
       text-align right
-      
-      &.empty
-        color #fb5454
-        text-decoration line-through
-        font-weight bold
   
   tfoot
     td

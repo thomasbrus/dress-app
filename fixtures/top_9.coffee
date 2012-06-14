@@ -1,15 +1,11 @@
+_ = require 'underscore'
+
 exports.johnboy_iii =
   id: 1
   title: 'JohnBoy III'
   image: '/images/johnboy-iii.png'
   brand: 'Khujo'
   color: 'Blauw / grijs'
-  assortments:
-    m: 
-      'C&A': 14
-      'The Sting': 3
-      'Open32': 9
-      'H&M': 0
 
 exports.campagnolo =
   id: 2
@@ -58,3 +54,19 @@ exports.tiki =
   id: 9
   title: 'Tiki'
   image: '/images/tiki.png'
+
+for name, article of exports
+  article.assortments = {}
+  for size in ['xs', 's', 'm', 'l', 'xl']
+    article.assortments[size] = {}
+    for store in ['C&A', 'The Sting', 'Open32', 'H&M']
+      rand = Math.random() * 20
+      if rand > 16
+        count = 0
+      else
+        count = Math.floor rand
+      article.assortments[size][store] = count
+
+  pool = _.without(exports, article)
+  pool = _.shuffle(pool)
+  article.related = pool[0...3]

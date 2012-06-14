@@ -1,4 +1,6 @@
 <div class="ui-body-c" id="suggestions">
-  <h3>Suggesties</h3>  
+  <h3>Suggesties</h3>
+  <%- @partial 'navbar' %>
+    
 </div>
 
