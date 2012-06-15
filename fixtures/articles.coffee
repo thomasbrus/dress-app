@@ -93,8 +93,8 @@ exports.themed =
 
   dress:
     id: 4
-    title: 'Kerstjurk'
-    image: '/images/articles/christmas/dress.png'
+    title: 'Oorwarmers'
+    image: '/images/articles/christmas/earmuffs.jpg'
     brand: 'Gsus'
     color: 'Rood'
 
@@ -115,7 +115,7 @@ exports.themed =
   merry_christmas:
     id: 7
     title: 'Nen zoalige kerst'
-    image: '/images/articles/christmas/mery-christmas.png'
+    image: '/images/articles/christmas/merry-christmas.png'
     brand: 'Gsus'
     color: 'Zwart / Rood / Groen'
 
