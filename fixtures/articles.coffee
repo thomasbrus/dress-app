@@ -133,15 +133,16 @@ exports.themed =
     brand: 'Christ'
     color: 'Wit met print'
 
-for name, filter of exports
-  for name, article of filter
-    article.assortments = {}
-    article.related =
-      [exports.themed.dog, exports.top_9.bugatti, exports.themed.hat]
-    #article.related = _.without(exports, article).shuffle()[0...3]
+for category, articles of exports
+  for article, attrs of articles
+    attrs.assortments = {}
+    related = _.values(exports[category])
+    related = _.without(related, attrs)
+    related = _.shuffle(related)
+    attrs.related = related[0...3]
     for size in SIZES
-      article.assortments[size] = {}
+      attrs.assortments[size] = {}
       for store in _.pluck(stores, 'title')
         rand = Math.random() * 25
         if rand > 20 then count = 0 else count = Math.floor rand
-        article.assortments[size][store] = count
+        attrs.assortments[size][store] = count
