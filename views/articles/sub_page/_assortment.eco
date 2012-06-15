@@ -12,7 +12,7 @@
         	  <% else: %>
         	    <tr>
         	  <% end %>
-      		      <th scope="row"><%= store %></th>
+      		      <th scope="row"><a style="text-decoration: none; color:white;" href="/stores/"><%= store %></a></th>
       		      <td><%= count %></td>
       		    </tr>
           <% end %>
