@@ -1,5 +1,5 @@
-<article class="ui-body ui-body-d">
-  <a href="/top-9/<%= @article.id %>" onclick="">
+<article class="ui-body-d">
+  <a href="<%= "/articles/#{@category}/#{@article.id}" %>">
     <img src="<%= @article.image %>" alt="<%= @article.title %>" />
     <h3><%= @article.title %></h3>
   </a>

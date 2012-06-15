@@ -1,26 +1,26 @@
 <div data-role="navbar">
 	<ul>
-	  <% for subpage, text of { assortment: 'Voorraad', suggestions: 'Suggesties' }: %>
+	  <% for sub_page, text of { assortment: 'Voorraad', suggestions: 'Suggesties' }: %>
 	    <li>
-		    <% if subpage is @subpage: %>
+		    <% if sub_page is @sub_page: %>
   			  <a href="#" class="ui-btn-active ui-state-persist"><%= text %></a>
 		    <% else: %>
-			    <a href="<%= "/top-9/#{@article.id}/#{subpage}" %>"><%= text %></a>
+			    <a href="<%= "/articles/#{@category}/#{@article.id}/#{sub_page}" %>"><%= text %></a>
 		    <% end %>
 	    </li>
 	  <% end %>
 	</ul>
 </div>
 
-<% if @subpage is 'assortment': %>
-  <div data-role="navbar">
+<% if @sub_page is 'assortment': %>
+  <div data-role="navbar" class="ui-body-c">
 		<ul>
       <% for size, text of { xs: 'XS', s: 'S', m: 'M', l: 'L', xl: 'XL' }: %>
         <li>
           <% if size is @size: %>
   			    <a href="#" data-theme="c" class="ui-btn-active ui-state-persist"><%= text %></a>
           <% else: %>
-  			    <a href="<%= "/top-9/#{@article.id}/#{@subpage}/#{size}" %>" data-theme="c"><%= text %></a>
+  			    <a href="<%= "/articles/#{@category}/#{@article.id}/#{@sub_page}/#{size}" %>" data-theme="c"><%= text %></a>
           <% end %>
         </li>
       <% end %>

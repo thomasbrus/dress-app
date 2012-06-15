@@ -5,10 +5,10 @@
 	</div>
 
 	<div data-role="content" data-theme="c">
-		<h1>Campagnolo delen</h1>
+		<h1><%= @article.title %> delen</h1>
 		<p>De volgende tekst wordt op je tijdlijn geplaatst:</p>
 		<blockquote>
-		  This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.
+		  <cite>Het is fijn, om een kersthond te zijn.</cite>
 		</blockquote>
 		<a href="#" data-role="button" data-rel="back" data-inline="true" data-icon="delete">Ga terug</a>       
 		<a href="#" data-role="button" data-rel="back" data-inline="true" data-icon="check" data-theme="b">Plaats</a>    

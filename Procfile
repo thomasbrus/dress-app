@@ -1,1 +1,1 @@
-web: cake server
+web: coffee app.coffee

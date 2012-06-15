@@ -4,7 +4,7 @@
 	
   <div data-role="content" class="ui-grid-b" id="articles">
 
-    <% for article, i in @top_9: %>
+    <% for article, i in @articles: %>
       <div class="<%= @cycle ['ui-block-a', 'ui-block-b', 'ui-block-c'], i %>">
         <%- @partial 'article', article: article %>
     	</div>

@@ -5,7 +5,7 @@
       Home
     </a>
   <% else unless @parent == false: %>  
-    <a href="<%= @parent.href %>" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
+    <a href="<%= @parent.link %>" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
       <%= @parent.title %>
     </a>
   <% end %>

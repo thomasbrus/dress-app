@@ -60,46 +60,42 @@
       clear right
 
 #assortment, #suggestions
-  margin-bottom 0 !important
-  
-#assortment
-  border-spacing 0
-  width 100%
-  margin-bottom 10px
-  
-  caption
-    width: 100%
+  padding 0 !important
 
-    h2
-      margin 10px 20px
+  table  
+    border-spacing 0
+    width 100%
+    margin-bottom 0
 
-  tbody, tfoot
-    th, td
-      padding 15px 20px
+    tbody, tfoot
+      th, td
+        padding 15px 20px
       
-  tbody
-    tr.empty
-      th
-        text-decoration line-through
+    tbody
+      tr
+        td
+          text-align right
+    
+      tr.empty
+        th
+          text-decoration line-through
 
+        td
+          color #fb5454
+          font-weight bold
+  
+      th, td
+        border-bottom 1px white solid
+
+    tfoot
       td
-        color #fb5454
-        font-weight bold
-  
-    th, td
-      border-bottom 1px white solid
-  
-    td
-      text-align right
-  
-  tfoot
-    td
-      padding 10px
-      overflow hidden
+        padding 10px
+        overflow hidden
+
+        a
+          float right
+
+        p
+          float left
+          padding 0 10px
       
-      a
-        float right
-        
-      p
-        float left
-        padding 0 10px

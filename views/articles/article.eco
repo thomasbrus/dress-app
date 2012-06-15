@@ -1,7 +1,13 @@
 <div data-role="page">
 
-  <%- @partial 'nav', parent: { title: 'Top 9', href: '/top-9' } %>
-
+  <% if @category is 'top-9': %>
+    <%- @partial 'nav', parent: { title: 'Top 9', link: '/articles/top-9' } %>
+  <% else if @category is 'themed': %>
+    <%- @partial 'nav', parent: { title: 'Kerstkleding', link: '/articles/themed' } %>
+  <% else: %>
+    <%- @partial 'nav', parent: { title: @title, link: '/articles' } %>
+  <% end %>
+  
 	<div data-role="content" id="article">  
     <div class="ui-grid-a ui-body-c">
       
@@ -19,10 +25,10 @@
       		</dl>
     		</section>
     		<section>
-    		  <a href="<%= "/share-on-twitter/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true">
+    		  <a href="<%= "/share-on-twitter/#{@category}/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true">
     		    Deel op Twitter
     		  </a>
-          <a href="<%= "/share-on-facebook/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true" data-theme="b">
+          <a href="<%= "/share-on-facebook/#{@category}/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true" data-theme="b">
             Deel op Facebook
           </a>
         </section>
@@ -30,7 +36,7 @@
       
     </div>
     
-    <%- @partial @subpage %>
+    <%- @partial 'sub_page/' + @sub_page %>
   </div>
 
 </div>

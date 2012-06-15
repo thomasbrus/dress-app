@@ -1,0 +1,14 @@
+<div id="suggestions">
+  <header class="ui-body-c">
+    <%- @partial '../navbar' %>
+  </header>
+  <section>
+    <div class="ui-body-c ui-grid-b" id="articles">
+      <% for related, i in @article.related: %>
+        <div class="<%= @cycle ['ui-block-a', 'ui-block-b', 'ui-block-c'], i %>">
+          <%- @partial '../article', article: related %>
+      	</div>
+      <% end %>
+    </div>
+  </section>
+</div>

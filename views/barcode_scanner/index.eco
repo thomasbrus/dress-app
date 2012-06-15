@@ -7,9 +7,9 @@
     </section>
 	</div>
 
-  <div data-role="footer" data-theme="c">
+  <div data-role="footer" data-theme="c" data-position="fixed">
     <a href="/menu" data-role="button" data-theme="a" class="ui-btn-left" data-icon="grid" data-iconpos="left">Menu</a>    
-    <a href="/top-9/1" data-role="button" data-icon="search" data-iconpos="left" data-theme="b" class="ui-btn-center camera-btn">Scan barcode</a>
+    <a href="/articles/top-9/1" data-role="button" data-icon="search" data-iconpos="left" data-theme="b" class="ui-btn-center camera-btn">Scan barcode</a>
   </div>
 
 </div>
