@@ -91,7 +91,7 @@ exports.themed =
     brand: 'Gsus'
     color: 'Rood'
 
-  dress:
+  earmuffs:
     id: 4
     title: 'Oorwarmers'
     image: '/images/articles/christmas/earmuffs.jpg'

@@ -3,5 +3,3 @@ $(document).bind 'pageinit mobileinit', ->
   $.mobile.defaultDialogTransition = 'slidedown'
   $.mobile.touchOverflowEnabled = true
 
-$.mobile.loading 'hide'
-

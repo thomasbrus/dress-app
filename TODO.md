@@ -1,2 +1,2 @@
-* Camera & barcode icon toevoegen: https://github.com/commadelimited/jQuery-Mobile-Icon-Pack
-* Inline afspelen filmpje
+* Bestel online popup
+* Adres van winkels wijzigen
