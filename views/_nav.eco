@@ -2,7 +2,7 @@
 
   <% unless @parent?: %>
     <a href="/menu" data-role="button" data-icon="back" data-iconpos="left" data-theme="c">
-      Home
+      Menu
     </a>
   <% else unless @parent == false: %>  
     <a href="<%= @parent.link %>" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
