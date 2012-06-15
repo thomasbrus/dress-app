@@ -1,12 +1,14 @@
 <div data-role="page">
 
-  <% if @category is 'top-9': %>
+<!--  <% if @category is 'top-9': %>
     <%- @partial 'nav', parent: { title: 'Top 9', link: '/articles/top-9' } %>
   <% else if @category is 'themed': %>
     <%- @partial 'nav', parent: { title: 'Kerstkleding', link: '/articles/themed' } %>
   <% else: %>
     <%- @partial 'nav', parent: { title: @title, link: '/articles' } %>
-  <% end %>
+  <% end %>-->
+
+    <%- @partial 'nav', parent: { title: 'Menu', link: '/menu/' } %>
   
 	<div data-role="content" id="article">  
     <div class="ui-grid-a ui-body-c">
