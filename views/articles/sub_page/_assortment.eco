@@ -13,7 +13,13 @@
         	    <tr>
         	  <% end %>
       		      <th scope="row"><a style="text-decoration: none; color:white;" href="/stores/"><%= store %></a></th>
-      		      <td><%= count %></td>
+      		      <td>
+		      	<% if count is 0: %>
+				-	
+			<% else: %>
+				€<%= (Math.round((Math.random()*30)*100))/100 %>
+			<% end %>
+		      </td>
       		    </tr>
           <% end %>
         </tbody>
