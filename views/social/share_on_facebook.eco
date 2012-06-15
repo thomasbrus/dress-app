@@ -8,7 +8,7 @@
 		<h1><%= @article.title %> delen</h1>
 		<p>De volgende tekst wordt op je tijdlijn geplaatst:</p>
 		<blockquote>
-		  <cite>Ik ga dit kopen! <%= @article.title %></cite>
+		  <cite><input type="text" value="Ik ga dit kopen! <%= @article.title %>" /></cite>
 		</blockquote>
 		<a href="#" data-role="button" data-rel="back" data-inline="true" data-icon="delete">Ga terug</a>       
 		<a href="#" data-role="button" data-rel="back" data-inline="true" data-icon="check" data-theme="b">Plaats</a>    
