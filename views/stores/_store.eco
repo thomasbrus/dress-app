@@ -5,7 +5,7 @@
 	    <%= @store.address %> <br />
   	  <%= @store.zip_code %> <%= @store.city %><br />
   	  <%= @store.phone %> <br />
-  	<p>
+  	</p>
   	<div class="actions">
   	  <% @store.maps_link = "http://maps.google.com/maps?q=#{@store.address},+#{@store.city}" %>
   	  <%- @link_to 'Bezoek site', @store.link, 'data-role': 'button', 'data-theme': 'b', 'data-inline': 'true', 'data-mini': 'true', 'data-corners': 'false' %>

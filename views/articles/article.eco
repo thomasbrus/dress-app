@@ -10,7 +10,7 @@
       </div>
       
       <div class="ui-block-b info">
-        <section>
+        <section class="features">
           <dl title="Kledingstuk info">
       			<dt>Merk</dt>
       			<dd><%= @article.brand %></dd>
@@ -18,11 +18,11 @@
       			<dd><%= @article.color %></dd>
       		</dl>
     		</section>
-    		<section>
-    		  <a href="<%= "/share-on-twitter/#{@category}/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true">
+    		<section class="social">
+    		  <a href="<%= "/share-on-twitter/#{@category}/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true" data-mini="true">
     		    Deel op Twitter
     		  </a>
-          <a href="<%= "/share-on-facebook/#{@category}/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true" data-theme="b">
+          <a href="<%= "/share-on-facebook/#{@category}/#{@article.id}" %>" data-rel="dialog" data-role="button" data-inline="true" data-theme="b" data-mini="true">
             Deel op Facebook
           </a>
         </section>
