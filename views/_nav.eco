@@ -1,15 +1,11 @@
 <div data-role="header" data-theme="a">
 
-  <% unless @parent?: %>
-    <a href="/menu" data-role="button" data-icon="back" data-iconpos="left" data-theme="c">
+  <% unless @path is '/menu': %>
+    <a href="/menu" data-role="button" data-icon="grid" data-iconpos="left" data-theme="a">
       Menu
     </a>
-  <% else unless @parent == false: %>  
-    <a href="<%= @parent.link %>" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c">
-      <%= @parent.title %>
-    </a>
   <% end %>
-  
+
 	<h1><%= @title %></h1>
 
 	<a href="/" data-role="button" data-icon="grid" data-iconpos="left" data-theme="e" class="ui-btn-right" title="Barcode">

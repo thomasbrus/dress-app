@@ -48,7 +48,10 @@ exports.social =
     category = req.params.category.replace '-', '_'
     @article = find_article_by_category_and_id category, parseInt(req.params.id)
     if @article
-      res.render 'social/share_on_twitter', article: @article
+      res.render 'social/share',
+        article: @article
+        sub_title: 'Delen op Twitter'
+        description: 'De volgende tekst wordt getweet:'
     else
       throw Error "Kan kledingstuk #{req.params.id} niet vinden."
 
@@ -56,14 +59,17 @@ exports.social =
     category = req.params.category.replace '-', '_'
     @article = find_article_by_category_and_id category, parseInt(req.params.id)
     if @article
-      res.render 'social/share_on_facebook', article: @article
+      res.render 'social/share', 
+      article: @article
+      sub_title: 'Delen op Facebook'
+      description: 'De volgende tekst wordt op je tijdlijn geplaatst:'
     else
       throw Error "Kan kledingstuk #{req.params.id} niet vinden."
 
 exports.stores = 
   index: (req, res) ->
     @stores = [stores.c_and_a, stores.the_sting, stores.open32, stores.h_and_m]
-    res.render 'stores', title: 'Winkelinfo', stores: @stores
+    res.render 'stores/index.eco', title: 'Winkelinfo', stores: @stores
 
 exports.barcode_scanner =
   index: (req, res) ->

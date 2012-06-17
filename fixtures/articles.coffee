@@ -143,6 +143,6 @@ for category, articles of exports
     for size in SIZES
       attrs.assortments[size] = {}
       for store in _.pluck(stores, 'title')
-        rand = Math.random() * 25
-        if rand > 20 then count = 0 else count = Math.floor rand
-        attrs.assortments[size][store] = count
+        rand = Math.random() * 30
+        if rand > 25 then price = null else price = Math.round(rand * 100) / 100
+        attrs.assortments[size][store] = price
