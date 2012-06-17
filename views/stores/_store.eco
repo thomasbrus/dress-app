@@ -3,12 +3,13 @@
 	<div class="info">
 	  <p>
 	    <%= @store.address %> <br />
-  	  <%= [@store.zip_code, @store.city].join(' ') %> <br />
+  	  <%= @store.zip_code %> <%= @store.city %><br />
   	  <%= @store.phone %> <br />
   	<p>
   	<div class="actions">
-  	  <a href="<%= @store.link %>" data-role="button" data-theme="b" data-inline="true" data-mini="true" data-corners="false">Bezoek site</a>
-  	  <a href="http://maps.google.com/maps?q=<%= @store.address %>,+<%= @store.city %>" data-role="button" data-theme="e" data-inline="true" data-mini="true" data-corners="false">Open in Maps</a>
+  	  <% @store.maps_link = "http://maps.google.com/maps?q=#{@store.address},+#{@store.city}" %>
+  	  <%- @link_to 'Bezoek site', @store.link, 'data-role': 'button', 'data-theme': 'b', 'data-inline': 'true', 'data-mini': 'true', 'data-corners': 'false' %>
+  	  <%- @link_to 'Open in Maps', @store.maps_link, 'data-role': 'button', 'data-theme': 'e', 'data-inline': 'true', 'data-mini': 'true', 'data-corners': 'false' %>
 	  </div>
   </div>
   

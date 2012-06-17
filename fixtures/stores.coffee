@@ -4,7 +4,7 @@ exports.c_and_a =
   zip_code: '7511 HN'
   city: 'Enschede'
   phone: '053-1234567'
-  link: 'http://www.ca.nl/'
+  link: 'http://www.c-and-a.com/'
   ratings:
     price: 4
     service: 3
@@ -30,7 +30,7 @@ exports.the_sting =
   zip_code: '7511 HN'
   city: 'Enschede'
   phone: '053-1234567'
-  link: 'http://www.sting.nl/'
+  link: 'http://www.thesting.com/'
   ratings:
     price: 2
     service: 4
@@ -43,7 +43,7 @@ exports.h_and_m =
   zip_code: '7511 HS'
   city: 'Enschede'
   phone: '053-1234567'
-  link: 'http://www.hm.nl/'
+  link: 'http://www.hm.com/'
   ratings:
     price: 4
     service: 4
