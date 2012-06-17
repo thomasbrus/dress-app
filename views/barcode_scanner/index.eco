@@ -3,7 +3,7 @@
 	<div data-role="content">
 	  <img src="/images/barcode-scanner.jpg" alt="Barcode scanner" id="barcode-scanner" />
     <section class="explanation">
-      <p>Houdt de barcode van het kledingstuk voor de lens om hem te scannen.</p>
+      <p>Houd de barcode van het kledingstuk voor de lens om hem te scannen.</p>
     </section>
 	</div>
 
