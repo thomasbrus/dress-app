@@ -68,8 +68,8 @@ exports.social =
 
 exports.stores = 
   index: (req, res) ->
-    @stores = [stores.c_and_a, stores.the_sting, stores.open32, stores.h_and_m]
-    res.render 'stores/index.eco', title: 'Winkelinfo', stores: @stores
+    @stores = [stores.c_and_a, stores.open32, stores.the_sting, stores.h_and_m]
+    res.render 'stores/index.eco', title: 'Winkels in de buurt', stores: @stores
 
 exports.barcode_scanner =
   index: (req, res) ->

@@ -5,7 +5,7 @@
 	<div data-role="content">
 
     <ul data-role="listview">
-      <li><a href="/stores">Winkelinfo</a></li>
+      <li><a href="/stores">Winkels in de buurt</a></li>
       <li><a href="/articles/top-9">Kleding Top 9</a></li>
       <li><a href="/articles/themed">Kerstkleding</a></li>
     </ul>
