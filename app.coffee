@@ -1,7 +1,8 @@
-express = require 'express'
-eco     = require 'eco'
-routes  = require './routes'
-assets  = require 'connect-assets'
+express         = require 'express'
+express_helpers = require 'express-helpers'
+eco             = require 'eco'
+routes          = require './routes'
+assets          = require 'connect-assets'
 
 app = module.exports = express.createServer();
 
@@ -24,10 +25,15 @@ app.configure 'production', ->
   app.use express.errorHandler()
 
 # Helpers
+express_helpers app
 
 app.helpers
   cycle: (classes, i) ->
     classes[i % classes.length]
+
+app.dynamicHelpers
+  path: (req) ->
+    req.path
 
 # Routes
 

@@ -6,15 +6,15 @@
     <table summary="Voorraad per winkel per kledingmaat" class="ui-body-a">
       <% if @num_assortments > 0: %>
     	  <tbody>
-      	  <% for store, count of @article.assortments[@size]: %>
-    		    <% if count is 0: %>
-        	    <tr class="empty">    	    
+      	  <% for store, price of @article.assortments[@size]: %>
+    		    <% unless price?: %>
+        	    <tr class="out-of-stock">
         	  <% else: %>
         	    <tr>
         	  <% end %>
-      		      <th scope="row"><%= store %></th>
-      		      <td><%= count %></td>
-      		    </tr>
+      		      <th scope="row"><%- @link_to store, '/stores' %></th>
+      		      <td><%= if price? then '€' + price else 'Niet op voorraad'  %></td>
+    		      </tr>
           <% end %>
         </tbody>
       <% end %>
