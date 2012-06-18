@@ -71,12 +71,11 @@ exports.social =
 
 exports.stores = 
   index: (req, res) ->
-    @active_store = find_store_by_id parseInt(req.params.id)
-    if @active_store
-      @stores = _.values stores
-      res.render 'stores/index.eco', title: 'Winkels in de buurt', stores: @stores, active_store: @active_store      
-    else
-      throw Error "Kan winkel #{req.params.id} niet vinden."
+    if req.params.id?
+      @active_store = find_store_by_id parseInt(req.params.id)
+      throw Error "Kan winkel #{req.params.id} niet vinden." unless @active_store?
+    @stores = _.values stores
+    res.render 'stores/index.eco', title: 'Winkels in de buurt', stores: @stores, active_store: @active_store      
 
 exports.barcode_scanner =
   index: (req, res) ->

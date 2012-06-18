@@ -4,7 +4,7 @@
 	
 	<div data-role="content">
     <% for store in @stores: %>
-      <div id="store_<%= store.id %>" data-role="collapsible" <%- 'data-collapsed="false"' if @active_store.title is store.title %> data-theme="c" data-content-theme="d" data-iconpos="right">
+      <div id="store_<%= store.id %>" data-role="collapsible" <%- 'data-collapsed="false"' if @active_store is store %> data-theme="c" data-content-theme="d" data-iconpos="right">
         <h3><%= store.title %></h3>
         <div><%- @partial 'store', store: store %></div>
       </div>
