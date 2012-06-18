@@ -4,15 +4,17 @@
   </header>
   <section>
     <table summary="Voorraad per winkel per kledingmaat" class="ui-body-a">
-      <% if @num_assortments > 0: %>
+      <% console.log @article %>
+      <% if @article.assortments[size].length > 0: %>
     	  <tbody>
-      	  <% for store, price of @article.assortments[@size]: %>
+      	  <% for assortment in @article.assortments[@size]: %>
+      	    <% [store, price] = assortment %>
     		    <% unless price?: %>
         	    <tr class="out-of-stock">
         	  <% else: %>
         	    <tr>
         	  <% end %>
-      		      <th scope="row"><%- @link_to store, '/stores' %></th>
+      		      <th scope="row"><%- @link_to store.title, '/stores/' + store.id %></th>
       		      <td><%= if price? then '€' + price else 'Niet op voorraad'  %></td>
     		      </tr>
           <% end %>
@@ -20,7 +22,7 @@
       <% end %>
       <tfoot>
         <tr>
-          <% if @num_assortments > 0: %>
+          <% if @article.assortments[size].length > 0: %>
             <td colspan="2">        
               <p><small>Liever op internet bestellen?</small></p>
               <a href="#" data-role="button" data-inline="true" data-theme="e">Bestel online</a>

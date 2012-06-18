@@ -1,4 +1,5 @@
 exports.c_and_a =
+  id: 1
   title: 'C&A'
   address: 'Hendrik Jan van Heekplein 52'
   zip_code: '7511 HN'
@@ -12,6 +13,7 @@ exports.c_and_a =
     average: 4
 
 exports.open32 =
+  id: 2
   title: 'Open32'
   address: 'Klanderij 81'
   zip_code: '7511 HS'
@@ -25,6 +27,7 @@ exports.open32 =
     average: 3
 
 exports.the_sting =
+  id: 3
   title: 'The Sting'
   address: 'Hendrik Jan van Heekplein 86'
   zip_code: '7511 HN'
@@ -38,6 +41,7 @@ exports.the_sting =
     average: 3
 
 exports.h_and_m =
+  id: 4
   title: 'H&M'
   address: 'Klanderij 98'
   zip_code: '7511 HS'

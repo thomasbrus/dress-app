@@ -42,7 +42,7 @@ app.get '/menu', routes.index
 app.get '/articles/:category', routes.articles.index
 app.get '/articles/:category/:id/:subpage?', routes.articles.show
 app.get '/articles/:category/:id/assortment/:size?', routes.articles.show
-app.get '/stores', routes.stores.index
+app.get '/stores/:id?', routes.stores.index
 app.get '/share-on-twitter/:category/:id', routes.social.share_on_twitter
 app.get '/share-on-facebook/:category/:id', routes.social.share_on_facebook
 

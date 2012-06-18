@@ -142,11 +142,11 @@ for category, articles of exports
     attrs.related = related[0...3]
     base_price = Math.random() * 30
     for size, i in SIZES
-      attrs.assortments[size] = {}
+      attrs.assortments[size] = []
       price = base_price + i
-      for store in _.pluck(stores, 'title')
+      for name, store of stores
         if Math.random() > 0.8
           store_price = null
         else
           store_price = Math.round((price + Math.random()) * 100) / 100
-        attrs.assortments[size][store] = store_price
+        attrs.assortments[size].push [store, store_price]

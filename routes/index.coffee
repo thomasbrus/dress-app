@@ -7,6 +7,11 @@ find_article_by_category_and_id = (category, id) ->
     return article if article.id is id
   null
 
+find_store_by_id = (id) ->
+  for name, store of stores
+    return store if store.id is id
+  null
+
 exports.index = (req, res) ->
   res.render 'index', title: 'Startpagina'
     
@@ -25,15 +30,10 @@ exports.articles =
       @article = find_article_by_category_and_id category.replace('-', '_'), parseInt(req.params.id)    
       @sub_page = req.params.subpage or 'assortment'
       @size = req.params.size or 'm'
-      if @article
-        try
-          @num_assortments = Object.keys(@article.assortments[@size]).length
-        catch e
-          @num_assortments = 0        
+      if @article      
         res.render 'articles/article', {
           title: @article.title,
           article: @article,
-          num_assortments: @num_assortments,
           sub_page: @sub_page,
           size: @size,
           category: @category
@@ -68,8 +68,12 @@ exports.social =
 
 exports.stores = 
   index: (req, res) ->
-    @stores = [stores.c_and_a, stores.open32, stores.the_sting, stores.h_and_m]
-    res.render 'stores/index.eco', title: 'Winkels in de buurt', stores: @stores
+    @active_store = find_store_by_id parseInt(req.params.id)
+    if @active_store
+      @stores = _.values stores
+      res.render 'stores/index.eco', title: 'Winkels in de buurt', stores: @stores, active_store: @active_store      
+    else
+      throw Error "Kan winkel #{req.params.id} niet vinden."
 
 exports.barcode_scanner =
   index: (req, res) ->
