@@ -1,8 +1,6 @@
 _       = require 'underscore'
 stores  = require './stores'
 
-SIZES = ['xs', 's', 'm', 'l', 'xl']
-
 exports.top_9 =
   
   johnboy_iii:
@@ -134,19 +132,18 @@ exports.themed =
     color: 'Wit met print'
 
 for category, articles of exports
-  for article, attrs of articles
-    attrs.assortments = {}
+  for __, article of articles
     related = _.values(exports[category])
-    related = _.without(related, attrs)
+    related = _.without(related, article)
     related = _.shuffle(related)
-    attrs.related = related[0...3]
+    article.related = related[0...3]
+    article.assortments = {}
     base_price = Math.random() * 30
-    for size, i in SIZES
-      attrs.assortments[size] = []
+    for size, i in ['xs', 's', 'm', 'l', 'xl']
+      article.assortments[size] = []
       price = base_price + i
       for name, store of stores
         if Math.random() > 0.8
-          store_price = null
+          article.assortments[size].push [store, null]          
         else
-          store_price = Math.round((price + Math.random()) * 100) / 100
-        attrs.assortments[size].push [store, store_price]
+          article.assortments[size].push [store, (price + Math.random()).toString()[0...4]]

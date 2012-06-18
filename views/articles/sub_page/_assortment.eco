@@ -4,7 +4,6 @@
   </header>
   <section>
     <table summary="Voorraad per winkel per kledingmaat" class="ui-body-a">
-      <% console.log @article %>
       <% if @article.assortments[size].length > 0: %>
     	  <tbody>
       	  <% for assortment in @article.assortments[@size]: %>
