@@ -65,6 +65,9 @@ exports.social =
       description: 'De volgende tekst wordt op je tijdlijn geplaatst:'
     else
       throw Error "Kan kledingstuk #{req.params.id} niet vinden."
+  
+  feedback: (req, res) ->
+    res.render 'social/feedback'
 
 exports.stores = 
   index: (req, res) ->

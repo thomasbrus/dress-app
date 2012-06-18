@@ -45,6 +45,7 @@ app.get '/articles/:category/:id/assortment/:size?', routes.articles.show
 app.get '/stores/:id?', routes.stores.index
 app.get '/share-on-twitter/:category/:id', routes.social.share_on_twitter
 app.get '/share-on-facebook/:category/:id', routes.social.share_on_facebook
+app.get '/share/success', routes.social.feedback
 
 app.listen (process.env.PORT or 3000)
 console.log "Web server listening on port %d in %s mode", app.address().port, app.settings.env

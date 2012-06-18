@@ -1,0 +1,9 @@
+<div data-role="dialog" id="share_feedback">
+
+	<div data-role="content">
+		<h1>Bericht geplaatst</h1>
+		<p>Thanks for sharing!</p>
+		<a href="javascript:history.go(-2);" data-role="button" data-rel="button" data-icon="arrow-r" data-iconpos="right">Verdergaan</a>
+	</div>
+
+</div>
