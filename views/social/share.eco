@@ -1,4 +1,4 @@
-<div data-role="dialog" id="share_dialog">
+<div data-role="dialog" data-theme="a" id="share_dialog">
 
 	<div data-role="content">
 	  
