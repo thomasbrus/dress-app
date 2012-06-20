@@ -146,4 +146,5 @@ for category, articles of exports
         if Math.random() > 0.8
           article.assortments[size].push [store, null]          
         else
-          article.assortments[size].push [store, (price + Math.random()).toString()[0...4]]
+          store_price = (price + Math.random()).toString()[0...(3 + Math.round(price).toString().length)]
+          article.assortments[size].push [store, store_price]
